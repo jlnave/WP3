@@ -25,4 +25,20 @@
       ] ); ?>
     </nav>
 
+    <div id="lang-switcher" class="lang-switcher">
+      <button id="lang-toggle" class="lang-btn" aria-label="Changer de langue">
+        &#127760; <span id="lang-current">FR</span> <span class="lang-arrow">&#9662;</span>
+      </button>
+      <div class="lang-dropdown" role="menu">
+        <button class="lang-option active" data-lang="fr" role="menuitem">
+          &#127467;&#127479; Fran&ccedil;ais
+        </button>
+        <button class="lang-option" data-lang="en" role="menuitem">
+          &#127468;&#127463; English
+        </button>
+      </div>
+    </div>
+
+    <button id="dark-mode-toggle" class="dark-toggle" aria-label="Passer en mode sombre" title="Mode sombre">&#9790;</button>
+
   </header>

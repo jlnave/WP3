@@ -6,9 +6,17 @@
 
 // --- Chargement du style principal ---
 function wp3_enqueue_styles() {
-    wp_enqueue_style( 'wp3-style', get_stylesheet_uri(), [], '1.0' );
+    wp_enqueue_style( 'wp3-style', get_stylesheet_uri(), [], '1.6' );
+    wp_enqueue_script( 'wp3-dark-mode', get_template_directory_uri() . '/dark-mode.js', [], '1.6', true );
+    wp_enqueue_script( 'wp3-lang', get_template_directory_uri() . '/lang-switcher.js', [], '1.6', true );
 }
 add_action( 'wp_enqueue_scripts', 'wp3_enqueue_styles' );
+
+// --- Script anti-flash dark mode (chargé avant le rendu de la page) ---
+function wp3_dark_mode_head_script() {
+    echo "<script>if(localStorage.getItem('darkMode')==='on'){document.documentElement.classList.add('dark-mode');}</script>\n";
+}
+add_action( 'wp_head', 'wp3_dark_mode_head_script', 1 );
 
 
 // --- Configuration du thème ---

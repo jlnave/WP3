@@ -20,17 +20,17 @@
       ] ); ?>
       <?php if ( ! has_nav_menu( 'footer' ) ) : ?>
         <ul>
-          <li><a href="<?php echo esc_url( get_permalink( get_page_by_path( 'mentions-legales' ) ) ); ?>">Mentions l&eacute;gales</a></li>
-          <li><a href="<?php echo esc_url( get_permalink( get_page_by_path( 'politique-de-confidentialite' ) ) ); ?>">Politique de confidentialit&eacute;</a></li>
-          <li><a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>">Contact</a></li>
+          <li><a href="<?php echo esc_url( get_permalink( get_page_by_path( 'mentions-legales' ) ) ); ?>" data-i18n="footer.mentions">Mentions l&eacute;gales</a></li>
+          <li><a href="<?php echo esc_url( get_permalink( get_page_by_path( 'politique-de-confidentialite' ) ) ); ?>" data-i18n="footer.politique">Politique de confidentialit&eacute;</a></li>
+          <li><a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>" data-i18n="footer.contact">Contact</a></li>
         </ul>
       <?php endif; ?>
     </div>
 
     <div class="footer-droite">
-      <p>Adresse&nbsp;: [Adresse]</p>
-      <p>T&eacute;l&nbsp;: [Num&eacute;ro]</p>
-      <p>Mail&nbsp;: [Email]</p>
+      <p><span data-i18n="footer.adresse">Adresse&nbsp;:</span> [Adresse]</p>
+      <p><span data-i18n="footer.tel">T&eacute;l&nbsp;:</span> [Num&eacute;ro]</p>
+      <p><span data-i18n="footer.mail">Mail&nbsp;:</span> [Email]</p>
       <div class="reseaux-sociaux">
         <a href="#" aria-label="Facebook"> Facebook</a>
         <a href="#" aria-label="Instagram"> Instagram</a>
@@ -38,7 +38,7 @@
     </div>
 
     <div class="copyright">
-      <p>&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>. Tous droits r&eacute;serv&eacute;s.</p>
+      <p>&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>. <span data-i18n="footer.rights">Tous droits r&eacute;serv&eacute;s.</span></p>
     </div>
 
   </footer>
