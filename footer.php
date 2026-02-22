@@ -2,35 +2,35 @@
 
     <div class="footer-gauche">
       <div class="logo-footer">
-        <?php if ( has_custom_logo() ) : ?>
+        <?php if (has_custom_logo()) : ?>
           <?php the_custom_logo(); ?>
         <?php else : ?>
           LOGO
         <?php endif; ?>
       </div>
-      <h2><?php bloginfo( 'name' ); ?></h2>
-      <h3><?php bloginfo( 'description' ); ?></h3>
+      <h2><?php bloginfo('name'); ?></h2>
+      <h3><?php bloginfo('description'); ?></h3>
     </div>
 
     <div class="footer-milieu">
-      <?php wp_nav_menu( [
+      <?php wp_nav_menu([
         'theme_location' => 'footer',
         'container'      => false,
         'fallback_cb'    => false,
-      ] ); ?>
-      <?php if ( ! has_nav_menu( 'footer' ) ) : ?>
+      ]); ?>
+      <?php if (! has_nav_menu('footer')) : ?>
         <ul>
-          <li><a href="<?php echo esc_url( get_permalink( get_page_by_path( 'mentions-legales' ) ) ); ?>" data-i18n="footer.mentions">Mentions l&eacute;gales</a></li>
-          <li><a href="<?php echo esc_url( get_permalink( get_page_by_path( 'politique-de-confidentialite' ) ) ); ?>" data-i18n="footer.politique">Politique de confidentialit&eacute;</a></li>
-          <li><a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>" data-i18n="footer.contact">Contact</a></li>
+          <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('mentions-legales'))); ?>" data-i18n="footer.mentions">Mentions l&eacute;gales</a></li>
+          <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('politique-de-confidentialite'))); ?>" data-i18n="footer.politique">Politique de confidentialit&eacute;</a></li>
+          <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('contact'))); ?>" data-i18n="footer.contact">Contact</a></li>
         </ul>
       <?php endif; ?>
     </div>
 
     <div class="footer-droite">
-      <p><span data-i18n="footer.adresse">Adresse&nbsp;:</span> [Adresse]</p>
-      <p><span data-i18n="footer.tel">T&eacute;l&nbsp;:</span> [Num&eacute;ro]</p>
-      <p><span data-i18n="footer.mail">Mail&nbsp;:</span> [Email]</p>
+      <p><span data-i18n="footer.adresse">Adresse&nbsp;:</span> 20 Rue du Lycée – 97425 Les Avirons</p>
+      <p><span data-i18n="footer.tel">T&eacute;l&nbsp;:</span> +262 262 38 09 16</p>
+      <p><span data-i18n="footer.mail">Mail&nbsp;:</span> ce.9740045f@ac-reunion.fr</p>
       <div class="reseaux-sociaux">
         <a href="#" aria-label="Facebook"> Facebook</a>
         <a href="#" aria-label="Instagram"> Instagram</a>
@@ -38,11 +38,12 @@
     </div>
 
     <div class="copyright">
-      <p>&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>. <span data-i18n="footer.rights">Tous droits r&eacute;serv&eacute;s.</span></p>
+      <p>&copy; <?php echo esc_html(date('Y')); ?> <?php bloginfo('name'); ?>. <span data-i18n="footer.rights">Tous droits r&eacute;serv&eacute;s.</span></p>
     </div>
 
   </footer>
 
-<?php wp_footer(); ?>
-</body>
-</html>
+  <?php wp_footer(); ?>
+  </body>
+
+  </html>
